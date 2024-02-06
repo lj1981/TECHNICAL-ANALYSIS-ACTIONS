@@ -28,7 +28,33 @@ lines(Op(PEP),col="black", lwd=2)#Valor de abertura
 lines(Lo(PEP),col="red", lwd=2)#Valor mais baixo 
 lines(Cl(PEP),col="yellow", lwd=2)#Valor mais baixo 
 
+seriesLo(PEP)#valores mais baixos 
+seriesHi(PEP)#Valores mais altos
 
+seriesIncr(PEP) #Resultado logico 
+seriesDecr(PEP) #Resultado diminuio 
+seriesAccel(PEP)#Resultado aceleramento de crescimento 
+seriesDecel(PEP)#Resultado desacelerou 
+
+head(PEP,n=6) #Resultado originais 
+
+
+
+
+
+# Define o tema do gráfico
+tema <- chart_theme()
+
+# Define as cores para barras de aumento e queda
+tema$col$up <- "black"
+tema$col$dn <- "red"
+
+
+# Selecionar os dados para os meses de janeiro e fevereiro de 2024
+data_selected <- PEP["2024-01/2024-02"]
+
+# Criar o gráfico para os meses selecionados
+chart_Series(data_selected, type = 'candlesticks', theme = tema)
 
 
 
