@@ -1,4 +1,3 @@
-
-Technical analysis of an asset on the stock exchange
+Technical analysis of a share
 
 This project is still under construction
