@@ -80,6 +80,15 @@ Delt(Op(PEP),Cl(PEP),k=1)  #Calculando um delta com a diferença percentual
 plot(Delt(Op(PEP),Cl(PEP),k=1))
 
 
+PEP['2024']#Filtra os dados pelo ano 
+PEP['2024-02']#Filtro por mês 
+PEP['2023-03::2024-01'] #Filtro por periodo
+PEP['2024-02:']#Filtra do mês para frente 
+PEP[c('2023-03','2023-04')]#Filtra meses intercalados 
+
+
+
+
 
 
 
