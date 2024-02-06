@@ -86,8 +86,20 @@ PEP['2023-03::2024-01'] #Filtro por periodo
 PEP['2024-02:']#Filtra do mês para frente 
 PEP[c('2023-03','2023-04')]#Filtra meses intercalados 
 
+last(PEP)#Utimo valor 
+first(PEP)#Primeira cotaçâo do ano
+first(PEP,'1 months')
 
+dailyReturn(PEP)#Retorno por dia 
+weeklyReturn(PEP)#Por semana 
+monthlyReturn(PEP)#Por mês 
+allReturns(PEP)#Todo o periodo 
+yearlyReturn(PEP)#Por ano 
 
+getQuote('PEP')#Cotaçâo atual 
+getDividends('PEP')#Dividendos 
+
+removeSymbols(PEP)
 
 
 
