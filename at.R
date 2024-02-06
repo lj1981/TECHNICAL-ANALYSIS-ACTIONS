@@ -1,6 +1,6 @@
 library(quantmod)
 
-getSymbols("PEP", src="yahoo", from='2024-01-01', to='2024-02-05')
+getSymbols("PEP", src="yahoo", from='2023-03-01', to='2024-02-05')
 periodicity(PEP) #Funçâo do pacote XPM 
 CLASS(PEP)  #Formato dos dado de series temporal 
 head(PEP, n=6 ) # Visualizar os dados 
@@ -64,6 +64,16 @@ barChart(PEP) Cria direto o grafico
 candleChart(PEP)
 lineChart(PEP)
 lineChart(PEP, TA=NULL)
+
+
+chart_Series(PEP, TA=NULL,theme = tema)
+
+chart_Series(to.monthly(PEP), TA=NULL,theme = tema)#Grafico por mês 
+
+chart_Series(to.weekly(PEP), TA=NULL,theme = tema)#Por semana 
+
+chart_Series(to.quarterly(PEP), TA=NULL,theme = tema)# Por trimestre
+
 
 
 
