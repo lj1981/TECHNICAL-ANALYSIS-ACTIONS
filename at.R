@@ -2,7 +2,7 @@ library(quantmod)
 
 getSymbols("PEP", src="yahoo", from='2024-01-01', to='2024-02-05')
 periodicity(PEP) #Funçâo do pacote XPM 
-CLASS(PEP)  #Formato dos dados 
+CLASS(PEP)  #Formato dos dado de series temporal 
 head(PEP, n=6 ) # Visualizar os dados 
 
 Op(PEP) #Valor de abertura 
@@ -23,4 +23,20 @@ ClCl(PEP)#Compara periodo de fechamento com um anterior (dois dias)
 OpOp(PEP)#Compara periodo de abertura ''
 
 
-plot(Hi(PEP),col="Green", lwd=2)
+plot(Hi(PEP),col="Green", lwd=2)#Valor mais altos 
+lines(Op(PEP),col="black", lwd=2)#Valor de abertura 
+lines(Lo(PEP),col="red", lwd=2)#Valor mais baixo 
+lines(Cl(PEP),col="yellow", lwd=2)#Valor mais baixo 
+
+
+
+
+
+
+
+
+
+
+
+
+
