@@ -46,7 +46,7 @@ head(PEP,n=6) #Resultado originais
 tema <- chart_theme()
 
 # Define as cores para barras de aumento e queda
-tema$col$up <- "black"
+tema$col$up <- "green"
 tema$col$dn <- "red"
 
 
@@ -54,7 +54,21 @@ tema$col$dn <- "red"
 data_selected <- PEP["2024-01/2024-02"]
 
 # Criar o gráfico para os meses selecionados
-chart_Series(data_selected, type = 'candlesticks', theme = tema)
+chart_Series(data_selected, type = 'candlesticks',multi.col = TRUE,  theme = tema)
+chart_Series(data_selected, type = 'bars',multi.col = TRUE, theme = tema)
+chart_Series(PEP, type = 'line',multi.col = TRUE, theme = tema)
+
+chart_theme()
+
+barChart(PEP) Cria direto o grafico 
+candleChart(PEP)
+lineChart(PEP)
+lineChart(PEP, TA=NULL)
+
+
+
+
+
 
 
 
