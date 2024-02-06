@@ -74,6 +74,10 @@ chart_Series(to.weekly(PEP), TA=NULL,theme = tema)#Por semana
 
 chart_Series(to.quarterly(PEP), TA=NULL,theme = tema)# Por trimestre
 
+Lag(Cl(PEP))#Fechamneto das acoes anterior 
+Next(Cl(PEP))#Periodo para frente 
+Delt(Op(PEP),Cl(PEP),k=1)  #Calculando um delta com a diferença percentual 
+plot(Delt(Op(PEP),Cl(PEP),k=1))
 
 
 
